@@ -6,50 +6,271 @@
   <title>Peak Box - Manizales</title>
   <link rel="stylesheet" href="/assets/application.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-</head>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #2E4053;
+      color: #FFFFFF;
+      text-align: center;
+      overflow-x: hidden;
+      perspective: 1000px;
+    }
 
+    .background-animation {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: radial-gradient(circle, rgba(46,64,83,1) 0%, rgba(20,29,38,1) 100%);
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 100vh;
+        padding: 30px 0;
+        box-sizing: border-box;
+    }
+
+    .card-panel {
+        padding: 3em;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 15px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+        max-width: 90%;
+        width: 650px;
+        box-sizing: border-box;
+        transform: translateY(0) scale(1);
+        transition: all 0.8s ease-in-out;
+        margin: 30px auto;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    .logo {
+      margin-bottom: 2.5em;
+      animation: floatEffect 3s ease-in-out infinite alternate;
+    }
+
+    .logo img {
+      max-width: 280px;
+      height: auto;
+      filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.4));
+    }
+
+    h1 {
+      font-size: 3.2em;
+      margin-bottom: 0.6em;
+      color: #FFFFFF;
+      text-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 1.2em;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    #countdown {
+      font-size: 4.5em;
+      font-weight: bold;
+      margin-top: 1.5em;
+      margin-bottom: 2em;
+      color: #D8C3A5;
+      text-shadow: 0 0 20px rgba(216, 195, 165, 0.8);
+      letter-spacing: 2px;
+    }
+
+    #countdown.countdown-finished {
+      font-size: 2.5em;
+      line-height: 1.2;
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+
+    .action-button {
+      display: inline-block;
+      padding: 20px 40px;
+      background-color: #D8C3A5;
+      color: #2E4053;
+      text-decoration: none;
+      font-size: 1.8em;
+      font-weight: bold;
+      border-radius: 60px;
+      transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+      letter-spacing: 1px;
+    }
+
+    .action-button:hover {
+      background-color: #C3AF94;
+      transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+    }
+
+    .services-panel {
+        padding: 4em 3em;
+        background-color: rgba(56, 79, 102, 0.9);
+        border-radius: 15px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+        max-width: 90%;
+        width: 650px;
+        box-sizing: border-box;
+        color: white;
+        transform: translateY(0) scale(1);
+        transition: all 0.8s ease-in-out;
+        opacity: 0;
+        pointer-events: none;
+        display: none;
+        margin: 30px auto;
+        z-index: 1;
+    }
+
+    .services-panel.active {
+        opacity: 1;
+        pointer-events: all;
+        display: block;
+        transform: translateY(0) scale(1);
+    }
+
+    .services-panel h2 {
+        font-size: 2.5em;
+        margin-bottom: 1em;
+        color: #D8C3A5;
+        text-shadow: 0 0 10px rgba(216, 195, 165, 0.5);
+    }
+
+    .services-panel ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 1.5em;
+        margin-bottom: 2.5em;
+    }
+
+    .services-panel ul li {
+        font-size: 1.1em;
+        margin-bottom: 0.8em;
+        position: relative;
+        padding-left: 1.5em;
+    }
+
+    .services-panel ul li::before {
+        content: '🏋️';
+        position: absolute;
+        left: 0;
+        color: #D8C3A5;
+    }
+
+    @keyframes floatEffect {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+        100% { transform: translateY(0px); }
+    }
+
+    @media (max-width: 768px) {
+        .card-panel, .services-panel {
+            width: 95%;
+            padding: 1.8em;
+            margin: 20px auto;
+        }
+        .logo img {
+            max-width: 180px;
+            margin-bottom: 1.2em;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        p {
+            font-size: 0.95em;
+        }
+        #countdown {
+            font-size: 2.8em;
+        }
+        #countdown.countdown-finished {
+            font-size: 1.8em;
+        }
+        .action-button {
+            font-size: 1.3em;
+            padding: 14px 28px;
+        }
+        .services-panel h2 {
+            font-size: 1.8em;
+        }
+        .services-panel ul li {
+            font-size: 0.9em;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .card-panel, .services-panel {
+            padding: 1.2em;
+            margin: 15px auto;
+        }
+        .logo img {
+            max-width: 130px;
+            margin-bottom: 0.8em;
+        }
+        h1 {
+            font-size: 1.6em;
+            line-height: 1.3;
+        }
+        p {
+            font-size: 0.85em;
+        }
+        #countdown {
+            font-size: 2.2em;
+        }
+        #countdown.countdown-finished {
+            font-size: 1.4em;
+        }
+        .action-button {
+            font-size: 1.1em;
+            padding: 8px 15px;
+        }
+        .services-panel h2 {
+            font-size: 1.6em;
+        }
+        .services-panel ul li {
+            font-size: 0.85em;
+        }
+    }
+  </style>
+</head>
 <body>
   <div class="background-animation"></div>
 
   <div class="main-content">
     <div class="card-panel" id="main-landing-panel">
       <div class="logo">
-        <%= image_tag "peakbox_logo.png", alt: "Peak Box Logo" %>
+        <%= image_tag "peakbox_logo.png", alt: "Peak Box Logo", class: "header-logo" %>
       </div>
 
       <h1>¡Bienvenido a Peak Box Manizales!</h1>
       <p>Prepárate para una nueva experiencia de entrenamiento y bienestar.</p>
-      <p>¡Nuestra gran apertura está a punto de llegar!</p>
 
       <div id="countdown"></div>
 
-      <a href="#" class="action-button" id="services-toggle-button">Ver Nuestros Servicios</a>
+      <a href="#" class="action-button" id="go-to-app-button">Acceder a la Aplicación</a>
     </div>
-
-    <section id="services-section" class="services-panel">
-      <div class="logo">
-        <%= image_tag "peakbox_logo.png", alt: "Peak Box Logo" %>
-      </div>
-      <h2>Nuestros Servicios Exclusivos</h2>
-      <p>En Peak Box, te ofrecemos una variedad de programas diseñados para alcanzar tus metas de fitness:</p>
-      <ul>
-        <li>Entrenamiento Funcional de Alta Intensidad (HIIT)</li>
-        <li>Clases de Levantamiento Olímpico</li>
-        <li>Sesiones Personalizadas con Entrenadores Certificados</li>
-        <li>Nutrición y Asesoramiento Dietético</li>
-        <li>Áreas de Cardio y Pesas Libres</li>
-        <li>Y mucho más... ¡Innovando siempre para ti!</li>
-      </ul>
-      <a href="#" class="action-button" id="back-to-main-button">Regresar al Inicio</a>
-      <br><br>
-      <a href="#" class="action-button" id="login-button-secondary">Acceder a la Aplicación</a>
-    </section>
   </div>
 
-
   <script>
-    const openDate = new Date("Julio 20, 2025 00:00:00 GMT-0500").getTime();
-
+    const openDate = new Date("July 19, 2025 00:00:00 GMT-0500").getTime();
     const countdownElement = document.getElementById("countdown");
 
     const updateCountdown = () => {
@@ -62,62 +283,28 @@
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       if (distance < 0) {
-        countdownElement.innerHTML = "¡Ya hemos abierto! ¡Te esperamos!";
+        countdownElement.innerHTML = "¡Ya hemos abierto!<br> ¡Te esperamos!";
+        countdownElement.classList.add('countdown-finished');
         clearInterval(interval);
-        const servicesButton = document.getElementById('services-toggle-button');
-        servicesButton.textContent = '¡Agéndate Ahora!';
-        servicesButton.href = '#';
       } else {
         countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        countdownElement.classList.remove('countdown-finished');
       }
     };
 
     updateCountdown();
     const interval = setInterval(updateCountdown, 1000);
 
-    const mainPanel = document.getElementById('main-landing-panel');
-    const servicesPanel = document.getElementById('services-section');
-    const servicesToggleButton = document.getElementById('services-toggle-button');
-    const backToMainButton = document.getElementById('back-to-main-button');
-    const loginButtonSecondary = document.getElementById('login-button-secondary');
-
-    servicesToggleButton.addEventListener('click', function(e) {
-      e.preventDefault();
-      mainPanel.style.transform = 'translateY(-50px) scale(0.9)';
-      mainPanel.style.opacity = '0';
-      mainPanel.style.pointerEvents = 'none';
-
-      setTimeout(() => {
-        mainPanel.style.display = 'none';
-        servicesPanel.style.display = 'block';
-        setTimeout(() => {
-          servicesPanel.style.transform = 'translateY(0) scale(1)';
-          servicesPanel.style.opacity = '1';
-          servicesPanel.style.pointerEvents = 'all';
-        }, 50);
-      }, 800);
-    });
-
-    backToMainButton.addEventListener('click', function(e) {
-      e.preventDefault();
-      servicesPanel.style.transform = 'translateY(-50px) scale(0.9)';
-      servicesPanel.style.opacity = '0';
-      servicesPanel.style.pointerEvents = 'none';
-
-      setTimeout(() => {
-        servicesPanel.style.display = 'none';
-        mainPanel.style.display = 'block';
-        setTimeout(() => {
-          mainPanel.style.transform = 'translateY(0) scale(1)';
-          mainPanel.style.opacity = '1';
-          mainPanel.style.pointerEvents = 'all';
-        }, 50);
-      }, 800);
-    });
-
-    loginButtonSecondary.addEventListener('click', function(e) {
-        e.preventDefault();
-        alert('¡Redirigiendo a la aplicación principal de Peak Box para iniciar sesión!');
+    document.addEventListener('DOMContentLoaded', function() {
+      const goToAppButton = document.getElementById('go-to-app-button');
+      if (goToAppButton) {
+        goToAppButton.addEventListener('click', function(e) {
+          e.preventDefault();
+          alert('¡Serás redirigido a la aplicación principal de Peak Box!');
+          // Descomenta la siguiente línea y reemplaza con la URL real cuando quieras habilitar la redirección:
+          // window.location.href = "URL_PUBLICA_DE_TU_APP_PRINCIPAL/users/sign_in";
+        });
+      }
     });
   </script>
 </body>

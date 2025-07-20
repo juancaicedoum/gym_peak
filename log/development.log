@@ -441,3 +441,146 @@ Completed 200 OK in 106ms (Views: 20.6ms | GC: 11.3ms)
 
 
 Started GET "/assets/application.css" for 127.0.0.1 at 2025-07-13 13:56:42 -0500
+Started GET "/admin/schedules" for 127.0.0.1 at 2025-07-13 15:31:51 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/admin/schedules"):
+  
+Started GET "/" for 127.0.0.1 at 2025-07-13 15:31:55 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | GC: 0.0ms)
+Completed 200 OK in 106ms (Views: 12.0ms | GC: 10.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2025-07-13 15:31:55 -0500
+Started GET "/" for 127.0.0.1 at 2025-07-16 18:59:24 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 9.4ms | GC: 1.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | GC: 1.5ms)
+Completed 200 OK in 159ms (Views: 33.2ms | GC: 20.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2025-07-16 18:59:25 -0500
+Started GET "/" for 127.0.0.1 at 2025-07-20 10:56:39 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.9ms | GC: 1.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | GC: 1.0ms)
+Completed 200 OK in 135ms (Views: 26.6ms | GC: 12.7ms)
+
+
+Started GET "/assets/landing_page-fbedb6f9.css" for 127.0.0.1 at 2025-07-20 10:56:39 -0500
+Started GET "/assets/application.css" for 127.0.0.1 at 2025-07-20 10:56:39 -0500
+Started GET "/" for 127.0.0.1 at 2025-07-20 11:05:15 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 7.2ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | GC: 0.4ms)
+Completed 200 OK in 122ms (Views: 38.0ms | GC: 11.8ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2025-07-20 11:05:15 -0500
+Started GET "/URL_PUBLICA_DE_TU_APP_PRINCIPAL/users/sign_in" for 127.0.0.1 at 2025-07-20 11:05:18 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/URL_PUBLICA_DE_TU_APP_PRINCIPAL/users/sign_in"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-07-20 11:05:18 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for 127.0.0.1 at 2025-07-20 11:08:10 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.1ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | GC: 0.3ms)
+Completed 200 OK in 85ms (Views: 20.6ms | GC: 14.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2025-07-20 11:08:11 -0500
+Started GET "/" for 127.0.0.1 at 2025-07-20 11:09:29 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.8ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | GC: 0.4ms)
+Completed 200 OK in 71ms (Views: 20.3ms | GC: 9.8ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2025-07-20 11:09:29 -0500
+Started GET "/" for 127.0.0.1 at 2025-07-20 11:10:31 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.3ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | GC: 0.4ms)
+Completed 200 OK in 86ms (Views: 23.1ms | GC: 12.7ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2025-07-20 11:10:31 -0500
+Started GET "/" for 127.0.0.1 at 2025-07-20 11:12:09 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.0ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | GC: 0.3ms)
+Completed 200 OK in 83ms (Views: 20.3ms | GC: 13.2ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2025-07-20 11:12:09 -0500
+Started GET "/" for 127.0.0.1 at 2025-07-20 11:12:52 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.8ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | GC: 0.5ms)
+Completed 200 OK in 79ms (Views: 18.5ms | GC: 14.3ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2025-07-20 11:12:52 -0500
+Started GET "/" for 127.0.0.1 at 2025-07-20 11:14:28 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.0ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | GC: 0.4ms)
+Completed 200 OK in 70ms (Views: 16.6ms | GC: 12.7ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2025-07-20 11:14:28 -0500
+Started GET "/" for 127.0.0.1 at 2025-07-20 11:15:22 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.3ms | GC: 0.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | GC: 0.8ms)
+Completed 200 OK in 73ms (Views: 20.3ms | GC: 11.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2025-07-20 11:15:22 -0500
+Started GET "/" for 127.0.0.1 at 2025-07-20 11:15:27 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 5.9ms | GC: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2025-07-20 11:15:27 -0500
+Started GET "/" for 127.0.0.1 at 2025-07-20 11:17:43 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.4ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | GC: 0.3ms)
+Completed 200 OK in 76ms (Views: 18.1ms | GC: 13.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2025-07-20 11:17:43 -0500
